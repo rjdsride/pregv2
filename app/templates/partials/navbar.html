@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="nabar-brand">
+            <i class="fa-solid fa-gear"></i>
+            <span>Testando</span>
+        </div>
+
+        <div class="navbar-user">
+            <div class="user-info">
+                <span class="user-name"> {{ request.session.user.first_name }} {{request.session.user.last_name }} </span>
+                <span class="user-role">{{ 'Admin' if request.session.user.permissions.is_superuser else 'Usuário' }}</span>
+            </div>
+            <a href="/logout" class="logout-button">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </div>
+    </div>
+</nav>
